@@ -11,10 +11,17 @@ This repository contains automated tests for the Sauce Demo website using Cypres
 - [Contributing](#contributing)
 - [License](#license)
 
+npm Install
+---------------
+```
+npm init
+```
+
 Cypress Install
 ---------------
-```npm init
+```
 npm install cypress --save-dev   (install cypress)
+
 ```
 
 ## Running Tests
