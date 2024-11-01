@@ -23,16 +23,22 @@ o   Check that any available filters apply correctly to display only the selecte
 ***************************************** Detailed Test Cases ******************************************************
 
 ### Test Cases
+
 Login Tests
-Test Case ID	Test Description		
+
+Test Case ID	Test Description
+
 # TC01	        Verify successful login with valid credentials	
+
 Steps
 1. Navigate to login page
 2. Enter valid username
 3. Enter valid password
-4. Click "Login"	                 
+4. Click "Login"
+
 Expected Result 
 User is successfully logged in and redirected to the inventory page
+
 	                                   
 # TC02             Verify error message for invalid login	
 Steps
@@ -40,17 +46,21 @@ Steps
 2. Enter invalid username
 3. Enter invalid password
 4. Click "Login"	
+
 Expected Result 
 Error message is displayed: "Username and password do not match"
 
+
 Add to Cart Tests
-Test Case ID	Test Description		
-# TC03	        Add single item to cart
+Test Case ID	        Test Description		
+# TC03	                Add single item to cart
 Steps
 1. Login
 2. Add one item to cart	
+
 Expected Result
 The item is added to the cart, and the cart badge shows "1"
+
 
 # TC04	        Add multiple items to cart
 Steps	
@@ -60,6 +70,7 @@ Expected Result
 Multiple items are added, and the cart badge shows the correct item count
 
 Checkout Tests
+
 Test Case ID	Test Description		
 # TC05	        Successful checkout	
 Steps
@@ -67,38 +78,45 @@ Steps
 2. Proceed to checkout
 3. Complete form details
 4. Click "Finish"	
+
 Expected Result
 Order is completed, and a confirmation message is displayed
 
 # TC06         Verify error when missing checkout information
+
 Steps	
 1. Add items to cart
 2. Proceed to checkout
 3. Leave some fields blank
 4. Click "Finish"	
+
 Expected Result
 Error message indicating which fields are missing is displayed 
 
 # TC07            Verify if the session persists correctly
+
 Steps
-1.	Log in and add items to the cart.
-2.	Refresh the page or navigate back to the login page.
+1.Log in and add items to the cart.
+2.Refresh the page or navigate back to the login page.
+
 Expected Result
 After refresh, the login session should remain active, and cart items should persist.
 
 
 # TC08           Check Responsive functionality
+
 Steps
-1.	Open the Sauce Demo site on a mobile device or simulate a mobile viewport in DevTools.
-2.	Inspect the layout of the login page and inventory page.
+1.Open the Sauce Demo site on a mobile device or simulate a mobile viewport in DevTools.
+2.Inspect the layout of the login page and inventory page.
+
 Expected Result
 The layout should adjust correctly, with no overlapping or cutoff elements.
 
 
 <-------------------------------     Tools and Frameworks for Automation        ----------------------------->
 
-
 Automation Tool: Cypress
+
 Test Framework: Mocha (provided by Cypress)
 Test Execution: Tests will be executed locally and in CI pipelines (if integrated). 
 Tests will run in different browsers (Chrome, Firefox, Edge) to ensure cross-browser compatibility.
