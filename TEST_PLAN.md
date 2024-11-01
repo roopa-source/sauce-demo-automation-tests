@@ -1,36 +1,53 @@
 ### Test Plan for Sauce Demo Website
 
 # 1. Purpose
+
 This document outlines the test plan for the Sauce Demo website, focusing on its primary e-commerce functionalities. The goal is to ensure a seamless user experience by verifying critical features, detecting bugs, and assessing the website’s responsiveness across different devices.
 
+
 # 2. Scope
+
 In Scope:
+
 •   Login: 
     Verify successful and unsuccessful login attempts, 
     input validation, and boundary testing for credentials.
+    
 •   Product Inventory: 
     Check product display, sorting, and detail view.
+    
 •   Cart Management: 
     Ensure adding/removing items updates the cart.
+    
 •   Checkout: 
     Validate the checkout process from start to confirmation, including input validation.
 
+
 Out of Scope:
+
 •   Performance and load testing
 •   Security testing
 
 # 3. Testing Strategy
+
 Types of Testing:
 •   Functional Testing: Ensure features perform as intended.
+
 •   End-to-End Testing: Test complete user flows.
+
 •   Regression Testing: Confirm stability after changes.
+
 •   Input Validation and Boundary Testing: Verify input handling for expected and edge-case values.
 
 Environment:
 •   URL: https://www.saucedemo.com/v1/index.html
+
 •   Browsers: Chrome, Firefox, Safari, Edge
+
 •	Devices: Desktop (Windows, macOS), Tablet, and Mobile (Android, iOS)
+
 •	Test Data: Use predefined and randomized data for login, product selection, and checkout.
+
 
 # 4. Test Scenarios
 4.1 Login
@@ -65,27 +82,39 @@ Responsive Design
 2.	Session Expiry: Ensure sessions expire after a set period of inactivity, if applicable.
 
 # 5. Tools
+
 Automation Tool: Cypress
+
 Test Framework: Mocha (provided by Cypress)
+
 Test Execution: Tests will be executed locally and in CI pipelines (if integrated). Tests will run in different browsers (Chrome, Firefox, Edge) to ensure cross-browser compatibility.
 
 Cypress: Chosen for its speed and ease of use with modern web applications, making it ideal for verifying UI interactions.
+
  Mocha & Chai: These frameworks integrate well with Cypress, providing a readable structure for test cases, especially useful for input validation and error handling.
+ 
  GitHub & CI/CD Integration: Integrating Cypress tests with GitHub Actions or Jenkins enables continuous testing upon each code update, ensuring stability in each deployment.
 
 Reporting: Cypress Dashboard
 
 # 6. Deliverables
+
 •   Test Cases: Documented with steps and expected results (Cypress/e2e folder)
+
 •   Bug Reports: Documented in the repository’s issues section (https://github.com/roopa-source/sauce-demo-automation-tests/issues)
+
 •   Test Summary Report: Reports will be generated in the Cypress dashboard after test execution.
-•	Test execution results will be available in both detailed and summarized forms.
-    Summary of pass/fail results for each scenario.
+
+•	Test execution results will be available in both detailed and summarized forms, Summary of pass/fail results for each scenario.
 
 # 7. Schedule
 •  Test Case Design: 1 day
+
 •  Test Execution: 1 day
+
 •  Bug Reporting: Ongoing
 
+
 # 8. Approval
+
 •  Test results and any identified issues will be reviewed by stakeholders before approval and deployment.
