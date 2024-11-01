@@ -26,11 +26,14 @@ In Scope:
 Out of Scope:
 
 •   Performance and load testing
+
 •   Security testing
+
 
 # 3. Testing Strategy
 
 Types of Testing:
+
 •   Functional Testing: Ensure features perform as intended.
 
 •   End-to-End Testing: Test complete user flows.
