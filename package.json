@@ -1,0 +1,23 @@
+{
+  "name": "sauce-demo-automation-tests",
+  "version": "1.0.0",
+  "description": "Automated tests for the Sauce Demo website using Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/cypress run --headed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roopa-source/sauce-demo-automation-tests.git"
+  },
+  "keywords": [],
+  "author": "Roopa Ramisetty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roopa-source/sauce-demo-automation-tests/issues"
+  },
+  "homepage": "https://github.com/roopa-source/sauce-demo-automation-tests#readme",
+  "devDependencies": {
+    "cypress": "^13.15.1"
+  }
+}

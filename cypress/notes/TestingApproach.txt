@@ -1,0 +1,115 @@
+ 1. Testing Priorities 
+
+To ensure core functionality and a smooth user experience, the following functional tests are prioritized:
+
+1.  Input Validation:
+o   Login: Verify input validation for username and password fields, including handling of invalid and missing credentials.
+o   Checkout Information: Check required fields (e.g., name, address) for validity and error handling, especially for blank or improperly formatted data.
+
+2.  Boundary Testing:
+o   Cart Quantity Limits: Test adding items up to the cart’s maximum limit and removing down to zero to validate behaviour at boundary values.
+o   Input Length Limits: Validate character limits for fields such as username, password, and personal information during checkout.
+
+3.  User Flows:
+o   Login to Checkout Flow: Verify the complete flow from login to order confirmation, covering each step (login, add to cart, review cart, and checkout).
+o   Add and Remove from Cart: Ensure items can be added and removed correctly from the cart, updating the cart counter and subtotal accurately.
+
+4.  Sorting and Filtering:
+o   Validate sorting options (e.g., price, name) for the product inventory to confirm items are displayed in the correct order.
+o   Check that any available filters apply correctly to display only the selected category or criteria.
+
+
+
+***************************************** Detailed Test Cases ******************************************************
+
+## 8. Test Cases
+Login Tests
+Test Case ID	Test Description		
+# TC01	        Verify successful login with valid credentials	
+Steps
+1. Navigate to login page
+2. Enter valid username
+3. Enter valid password
+4. Click "Login"	                 
+Expected Result 
+User is successfully logged in and redirected to the inventory page
+	                                   
+# TC02             Verify error message for invalid login	
+Steps
+1. Navigate to login page
+2. Enter invalid username
+3. Enter invalid password
+4. Click "Login"	
+Expected Result 
+Error message is displayed: "Username and password do not match"
+
+Add to Cart Tests
+Test Case ID	Test Description		
+# TC03	        Add single item to cart
+Steps
+1. Login
+2. Add one item to cart	
+Expected Result
+The item is added to the cart, and the cart badge shows "1"
+
+# TC04	        Add multiple items to cart
+Steps	
+1. Login
+2. Add multiple items to cart
+Expected Result	
+Multiple items are added, and the cart badge shows the correct item count
+
+Checkout Tests
+Test Case ID	Test Description		
+# TC05	        Successful checkout	
+Steps
+1. Add items to cart
+2. Proceed to checkout
+3. Complete form details
+4. Click "Finish"	
+Expected Result
+Order is completed, and a confirmation message is displayed
+
+# TC06         Verify error when missing checkout information
+Steps	
+1. Add items to cart
+2. Proceed to checkout
+3. Leave some fields blank
+4. Click "Finish"	
+Expected Result
+Error message indicating which fields are missing is displayed 
+
+# TC07            Verify if the session persists correctly
+Steps
+1.	Log in and add items to the cart.
+2.	Refresh the page or navigate back to the login page.
+Expected Result
+After refresh, the login session should remain active, and cart items should persist.
+
+
+# TC08           Check Responsive functionality
+Steps
+1.	Open the Sauce Demo site on a mobile device or simulate a mobile viewport in DevTools.
+2.	Inspect the layout of the login page and inventory page.
+Expected Result
+The layout should adjust correctly, with no overlapping or cutoff elements.
+
+
+<-------------------------------     Tools and Frameworks for Automation        ----------------------------->
+
+
+Automation Tool: Cypress
+Test Framework: Mocha (provided by Cypress)
+Test Execution: Tests will be executed locally and in CI pipelines (if integrated). 
+Tests will run in different browsers (Chrome, Firefox, Edge) to ensure cross-browser compatibility.
+1.  Cypress:
+o   Purpose: Ideal for end-to-end testing and validating user flows, 
+             given its ease of setup, 
+             ability to run in the browser, 
+             and focus on JavaScript applications.
+o   Suitability: Fast feedback, robust API, and intuitive test-writing syntax make Cypress a top choice for validating UI, 
+                functional, and regression tests.
+
+2.  Reporting and CI/CD Integration:
+o   Spec Reporting for detailed test reporting and visual insights.
+o   GitHub Actions for CI/CD to ensure automated test runs on every commit or pull request, ensuring quick feedback on code changes.
