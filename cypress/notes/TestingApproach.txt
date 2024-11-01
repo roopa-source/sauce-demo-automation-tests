@@ -1,4 +1,4 @@
- 1. Testing Priorities 
+Testing Priorities 
 
 To ensure core functionality and a smooth user experience, the following functional tests are prioritized:
 
@@ -22,7 +22,7 @@ o   Check that any available filters apply correctly to display only the selecte
 
 ***************************************** Detailed Test Cases ******************************************************
 
-## 8. Test Cases
+### Test Cases
 Login Tests
 Test Case ID	Test Description		
 # TC01	        Verify successful login with valid credentials	
